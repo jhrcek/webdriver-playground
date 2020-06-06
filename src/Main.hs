@@ -8,14 +8,14 @@ import Control.Exception (bracket)
 import qualified Control.Foldl as Fold
 import qualified Data.Text as Text
 import qualified Data.Text.Read as TR
-import qualified Scenario
+import qualified Scenario.GoogleSearch as GoogleSearch
 import Turtle
 
 main :: IO ()
 main = do
   downloadSeleniumServer
   setupChromedriver
-  withSeleniumServer Scenario.run
+  withSeleniumServer GoogleSearch.run
 
 downloadSeleniumServer :: IO ()
 downloadSeleniumServer = do

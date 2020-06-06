@@ -1,8 +1,8 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module Scenario where
+module Scenario.GoogleSearch where
 
-import           Test.WebDriver
+import Test.WebDriver
 
 chromeConfig :: WDConfig
 chromeConfig = useBrowser chrome defaultConfig
