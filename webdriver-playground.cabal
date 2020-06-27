@@ -17,10 +17,14 @@ executable webdriver-playground
   hs-source-dirs:      src
   main-is:             Main.hs
   other-modules:       Scenario.GoogleSearch
+                       Scenario.CrawlLinks
+                       Scenario.ScrapeHaddockPkgIndex
   default-language:    Haskell2010
   ghc-options:         -Wall -threaded
   build-depends:       base >= 4.7 && < 5
                      , foldl
+                     , containers
+                     , tagsoup
                      , text
                      , turtle
                      , webdriver 
