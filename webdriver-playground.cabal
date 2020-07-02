@@ -1,30 +1,36 @@
-name:                webdriver-playground
-version:             0.1.0.0
--- synopsis:
--- description:
-homepage:            https://github.com/githubuser/webdriver-playground#readme
-license:             BSD3
-license-file:        LICENSE
-author:              Author name here
-maintainer:          example@example.com
-copyright:           2020 Author name here
-category:            Web
-build-type:          Simple
-cabal-version:       >=1.10
-extra-source-files:  README.md
+cabal-version:      3.0
+name:               webdriver-playground
+version:            0.1.0.0
+license:            BSD-3-Clause
+license-file:       LICENSE
+copyright:          2020 Jan Hrček
+maintainer:         honza.hrk@gmail.com
+author:             Author name here
+homepage:           https://github.com/githubuser/webdriver-playground#readme
+synopsis:           My playground for playing with webdriver
+category:           Web
+build-type:         Simple
+extra-source-files: README.md
+
+source-repository head
+    type:     git
+    location: git@github.com/jhrcek/webdriver-playground.git
 
 executable webdriver-playground
-  hs-source-dirs:      src
-  main-is:             Main.hs
-  other-modules:       Scenario.GoogleSearch
-                       Scenario.CrawlLinks
-                       Scenario.ScrapeHaddockPkgIndex
-  default-language:    Haskell2010
-  ghc-options:         -Wall -threaded
-  build-depends:       base >= 4.7 && < 5
-                     , foldl
-                     , containers
-                     , tagsoup
-                     , text
-                     , turtle
-                     , webdriver 
+    main-is:          Main.hs
+    hs-source-dirs:   src
+    other-modules:
+        Scenario.GoogleSearch
+        Scenario.CrawlLinks
+        Scenario.ScrapeHaddockPkgIndex
+
+    default-language: Haskell2010
+    ghc-options:      -Wall -threaded
+    build-depends:
+        base >=4.7 && <5,
+        foldl,
+        containers,
+        tagsoup,
+        text,
+        turtle,
+        webdriver
