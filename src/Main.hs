@@ -8,18 +8,18 @@ import Control.Exception (bracket)
 import qualified Control.Foldl as Fold
 import qualified Data.Text as Text
 import qualified Data.Text.Read as TR
---import qualified Scenario.GoogleSearch as GoogleSearch
+import qualified Scenario.GoogleSearch as GoogleSearch
 --import qualified Scenario.CrawlLinks as Crawl
-import qualified Scenario.ScrapeHaddockPkgIndex as Scrape
+--import qualified Scenario.ScrapeHaddockPkgIndex as Scrape
 import Turtle
 
 main :: IO ()
 main = do
   downloadSeleniumServer
   setupChromedriver
-  --withSeleniumServer GoogleSearch.run
+  withSeleniumServer GoogleSearch.run
   --withSeleniumServer $ Crawl.run "doc-index-All.html"
-  withSeleniumServer Scrape.run
+  --withSeleniumServer Scrape.run
 
 
 downloadSeleniumServer :: IO ()
